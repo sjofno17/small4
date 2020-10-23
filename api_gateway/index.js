@@ -48,6 +48,7 @@ const configureMessageBroker = channel => {
     app.post('/api/orders', (req, res) => {
         const { body } = req;
         const bodyJson = JSON.stringify(body);
+
         channel.publish(order, createOrder, Buffer(bodyJson)); 
         console.log(`[x] Sent: ${bodyJson}`);
         return res.sendStatus(200);

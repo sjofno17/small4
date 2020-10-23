@@ -1,0 +1,4 @@
+C:\Users\sjofnoskars\Documents\VEFÞ\small4\logging_service\obj\Debug\netcoreapp3.1\logging_service.csprojAssemblyReference.cache
+C:\Users\sjofnoskars\Documents\VEFÞ\small4\logging_service\obj\Debug\netcoreapp3.1\logging_service.AssemblyInfoInputs.cache
+C:\Users\sjofnoskars\Documents\VEFÞ\small4\logging_service\obj\Debug\netcoreapp3.1\logging_service.AssemblyInfo.cs
+C:\Users\sjofnoskars\Documents\VEFÞ\small4\logging_service\obj\Debug\netcoreapp3.1\logging_service.csproj.CoreCompileInputs.cache

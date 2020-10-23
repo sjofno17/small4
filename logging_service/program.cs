@@ -1,9 +1,12 @@
-/*
+﻿/*
 LOGGING SERVICE (40%)
 It should be implemented as a console application in .NET Core using RabbitMQ
 1. (10%) It should consume the order created event using the queue “logging_queue”
 2. (30%) It should store the data within the logging event prefixed with “Log: “ within a file called log.txt
 */
+
+//Veit ekki hvernig rabbitmq kemur hér inn, náði ekki að "keyra" þetta dæmi..
+
 using System;
 
 using RabbitMQ.Client;
@@ -16,7 +19,7 @@ namespace logging_service
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using(var connection = factory.CreateConnection())
