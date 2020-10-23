@@ -18,9 +18,9 @@ channel.queue_bind(exchange=exchange_name, queue=email_queue_name, routing_key=c
 
 def send_simple_message(to, subject, body):
     return requests.post(
-        "https://api.mailgun.net/v3/<add-your-domain-here>/messages",
-        auth=("api", "<add-your-api-private-key-here>"),
-        data={"from": "Mailgun Sandbox <postmaster@<add-your-domain-here>>",
+        "https://api.mailgun.net/v3/sandboxc39b6a2572af4dcc97cddbfd1c593e87.mailgun.org/messages",
+        auth=("api", "53c13666-723b5036"),
+        data={"from": "Mailgun Sandbox <postmaster@sandboxc39b6a2572af4dcc97cddbfd1c593e87.mailgun.org>",
               "to": to,
               "subject": subject,
               "html": body})
@@ -33,9 +33,7 @@ def send_order_email(ch, method, properties, data):
     representation = email_template % items_html
     send_simple_message(parsed_msg['email'], 'Successful order!', representation)
 
-channel.basic_consume(send_order_email,
-                      queue=email_queue_name,
-                      no_ack=True)
+channel.basic_consume(send_order_email, queue=email_queue_name, no_ack=True)
 
 channel.start_consuming()
 connection.close()
